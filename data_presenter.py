@@ -1,17 +1,21 @@
 cupcake_invoices=open("CupcakeInvoices.csv")
 
-# def all_invoices(cupcake_invoices):
-#     for invoices in cupcake_invoices:
-#         print(invoices)
+def all_invoices(cupcake_invoices):
+    for invoices in cupcake_invoices:
+        print(invoices)
 
-# all_invoices(cupcake_invoices)
+all_invoices(cupcake_invoices)
 
-# def find_type(cupcake_invoices):
-#     for invoices in cupcake_invoices:
-#         split_invoices = invoices.split(',')
-#         print(split_invoices[2])
+cupcake_invoices.seek(0,0)
 
-# find_type(cupcake_invoices)
+def find_type(cupcake_invoices):
+    for invoices in cupcake_invoices:
+        split_invoices = invoices.split(',')
+        print(split_invoices[2])
+
+find_type(cupcake_invoices)
+
+cupcake_invoices.seek(0,0)
    
 def find_customer_total(cupcake_invoices):
     for invoices in cupcake_invoices:
@@ -22,6 +26,8 @@ def find_customer_total(cupcake_invoices):
          print(total)
 
 find_customer_total(cupcake_invoices)
+
+cupcake_invoices.seek(0,0)
 
 def find_overall_total(cupcake_invoices):
     new_total=0
